@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Adel Aswad — Mechanical Engineering Portfolio</title>
-<meta name="description" content="Injection mold tooling, CNC manufacturing and CFD work by Adel Aswad, mechanical engineering student at the University of Florida.">
+<meta name="description" content="Injection mold tooling, CFD and CNC manufacturing work by Adel Aswad, mechanical engineering student at the University of Florida.">
 <meta property="og:title" content="Adel Aswad — Mechanical Engineering Portfolio">
-<meta property="og:description" content="Mold tooling held to 0.02 mm, a national-winning machined car, and CFD on a scratch-built airframe.">
+<meta property="og:description" content="Mold tooling held to 0.02 mm, CFD on a scratch-built airframe, and a national-winning machined car.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,63 +138,6 @@ footer{margin-top:84px;padding-top:26px;border-top:2px solid var(--line);font-fa
 </section>
 
 <section class="proj">
-  <h2>Machining a national-winning car</h2>
-  <p class="where">Manufacturing Engineer &nbsp;|&nbsp; Vestyge Racing, STEM Racing, Riyadh &nbsp;|&nbsp; November 2024 to July 2025</p>
-  <p class="open">A car cut from a polyurethane block has to hit a surface finish target, a mass window and dimensional tolerances at once. Roughness costs you drag, mass costs you acceleration, and material removed to help one hurts the other.</p>
-
-  <div class="step">
-    <p class="n">Step one</p>
-    <h3>Wrote the toolpaths</h3>
-    <figure><img loading="lazy" decoding="async" src="camplans.jpg" alt="CNC toolpath plans for three machining orientations"></figure>
-    <p>Three machining orientations, each with its own plan, generated in QuickCAM Pro. A 6.35 mm ball nose clears bulk material fast, a 3.175 mm flat end cuts the detail the big tool cannot reach.</p>
-  </div>
-
-  <div class="step">
-    <p class="n">Step two</p>
-    <h3>Machined it in three setups</h3>
-    <figure><img loading="lazy" decoding="async" src="shop.jpg" alt="Machining, sanding and assembly work in the shop"></figure>
-    <p>The part has to be flipped between orientations, and every flip is a chance to lose alignment. Dowel-located foam fixtures meant it registered the same way each time. Machining, sanding, painting and assembly were all done in house.</p>
-  </div>
-
-  <div class="step">
-    <p class="n">Step three</p>
-    <h3>Measured the surface instead of judging it by eye</h3>
-    <figure><img loading="lazy" decoding="async" src="rough.jpg" alt="Digital microscope images of the machined surface"></figure>
-    <p>We had no profilometer. I traced a profile line across 200x digital microscope images and scaled it to microns against a reference, which gave a number to work against rather than an opinion about how smooth it felt.</p>
-  </div>
-
-  <div class="step">
-    <p class="n">Step four</p>
-    <h3>Changed one CAM parameter</h3>
-    <p>Dropping stepover from 12% to 10% brought the machined surface to 14.8 microns Ra against a 15 micron target. Finishing went from 800 grit sanding down to a single 1000 to 1200 grit pass, so the machine was doing work the sandpaper used to do.</p>
-  </div>
-
-  <div class="step">
-    <p class="n">Step five</p>
-    <h3>Found the center of mass by testing, not by assuming</h3>
-    <figure><img loading="lazy" decoding="async" src="comgraph.jpg" alt="Average race time plotted against ballast position" class="chart"></figure>
-    <p>Four timed runs per ballast position, averaged. A slight forward bias won at 1.113 s against 1.180 s with the ballast at the rear. Rear was stable but slow off the line, so the fast launch was worth the small loss in control.</p>
-  </div>
-
-  <div class="step">
-    <p class="n">Step six</p>
-    <h3>The car that raced</h3>
-    <figure><img loading="lazy" decoding="async" src="hero_car.jpg" alt="The finished car, three-quarter view" class="short"></figure>
-    <p>Built mass 48.1 g against a 48.5 g limit. Best run 1.001 s, down from 1.193 s across four builds. <em>Render by the team.</em></p>
-  </div>
-
-  <div class="result">
-    <div class="hero"><b>14.8</b><span>Microns Ra measured on the machined surface</span></div>
-    <dl class="spec">
-      <div><dt>Surface roughness target</dt><dd>15 &micro;m Ra <i>met</i></dd></div>
-      <div><dt>Mass limit and built mass</dt><dd>48.5 g limit, 48.1 g built <i>met</i></dd></div>
-      <div><dt>Best run, across four builds</dt><dd>1.001 s, from 1.193 s</dd></div>
-      <div><dt>National result</dt><dd>1st, 754 of 800</dd></div>
-    </dl>
-  </div>
-</section>
-
-<section class="proj">
   <h2>A 44 inch airframe, from CFD to the wing</h2>
   <p class="where">Aerodynamics and Structures Lead &nbsp;|&nbsp; Scope UF, founding member &nbsp;|&nbsp; January 2026 to present</p>
   <p class="open">We built the airframe from scratch and needed to know where it was losing performance before committing to the build. Hand calculations give lift and drag for a wing on its own. They say nothing about how the fuselage, wing and tail interact.</p>
@@ -271,6 +214,57 @@ footer{margin-top:84px;padding-top:26px;border-top:2px solid var(--line);font-fa
     </dl>
   </div>
   <p class="note"><span class="lab">What this does not show</span>The original sharp nose was never re-run in air, so 2.19 N is the drag of the revised state and not a measured saving. The first solve had water in the domain rather than air; its pressure monitor read 905 Pa against 0.85 Pa for the air case, and that ratio matching the water to air density ratio is how we found the fluid setting was wrong rather than the geometry. The propeller is not modeled, surfaces are rigid and smooth, and a ground plane still sits in the domain.</p>
+</section>
+
+<section class="proj">
+  <h2>Machining a national-winning car</h2>
+  <p class="where">Manufacturing Engineer &nbsp;|&nbsp; Vestyge Racing, STEM Racing, Riyadh &nbsp;|&nbsp; November 2024 to July 2025</p>
+  <p class="open">A car cut from a polyurethane block has to hit a surface finish target, a mass window and dimensional tolerances at once. Roughness costs you drag, mass costs you acceleration, and material removed to help one hurts the other.</p>
+
+  <div class="step">
+    <p class="n">Step one</p>
+    <h3>Wrote the toolpaths</h3>
+    <figure><img loading="lazy" decoding="async" src="camplans.jpg" alt="CNC toolpath plans for three machining orientations"></figure>
+    <p>Three machining orientations, each with its own plan, generated in QuickCAM Pro. A 6.35 mm ball nose clears bulk material fast, a 3.175 mm flat end cuts the detail the big tool cannot reach.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step two</p>
+    <h3>Machined it in three setups</h3>
+    <figure><img loading="lazy" decoding="async" src="shop.jpg" alt="Machining, sanding and assembly work in the shop"></figure>
+    <p>The part has to be flipped between orientations, and every flip is a chance to lose alignment. Dowel-located foam fixtures meant it registered the same way each time. Machining, sanding, painting and assembly were all done in house.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step three</p>
+    <h3>Measured the surface, then changed one number</h3>
+    <figure><img loading="lazy" decoding="async" src="rough.jpg" alt="Digital microscope images of the machined surface"></figure>
+    <p>We had no profilometer, so I traced a profile line across 200x digital microscope images and scaled it to microns against a reference. That turned a feeling about smoothness into a number. Dropping CAM stepover from 12% to 10% then brought the surface to 14.8 microns Ra against a 15 micron target, and finishing went from 800 grit sanding to a single 1000 to 1200 grit pass. The machine was doing work the sandpaper used to do.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step four</p>
+    <h3>Found the center of mass by testing, not by assuming</h3>
+    <figure><img loading="lazy" decoding="async" src="comgraph.jpg" alt="Average race time plotted against ballast position" class="chart"></figure>
+    <p>Four timed runs per ballast position, averaged. A slight forward bias won at 1.113 s against 1.180 s with the ballast at the rear. Rear was stable but slow off the line, so the fast launch was worth the small loss in control.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step five</p>
+    <h3>The car that raced</h3>
+    <figure><img loading="lazy" decoding="async" src="hero_car.jpg" alt="The finished car, three-quarter view" class="short"></figure>
+    <p>Built mass 48.1 g against a 48.5 g limit. Best run 1.001 s, down from 1.193 s across four builds. <em>Render by the team.</em></p>
+  </div>
+
+  <div class="result">
+    <div class="hero"><b>14.8</b><span>Microns Ra measured on the machined surface</span></div>
+    <dl class="spec">
+      <div><dt>Surface roughness target</dt><dd>15 &micro;m Ra <i>met</i></dd></div>
+      <div><dt>Mass limit and built mass</dt><dd>48.5 g limit, 48.1 g built <i>met</i></dd></div>
+      <div><dt>Best run, across four builds</dt><dd>1.001 s, from 1.193 s</dd></div>
+      <div><dt>National result</dt><dd>1st, 754 of 800</dd></div>
+    </dl>
+  </div>
 </section>
 
 <footer>
