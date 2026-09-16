@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adel Aswad — Mechanical Engineering Portfolio</title>
+<meta name="description" content="Injection mold tooling, CNC manufacturing and CFD work by Adel Aswad, mechanical engineering student at the University of Florida.">
+<meta property="og:title" content="Adel Aswad — Mechanical Engineering Portfolio">
+<meta property="og:description" content="Mold tooling held to 0.02 mm, a national-winning machined car, and CFD on a scratch-built airframe.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+<style>
+:root{
+  --bg:#F8F7F4; --ink:#15171A; --body:#2B2E30; --faint:#6E7477;
+  --rule:#DCD8D0; --line:#15171A; --accent:#9A5B2B; --met:#3F6B4E;
+  --sans:"Bricolage Grotesque",Helvetica,Arial,sans-serif;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#121314;--ink:#F3F1ED;--body:#BFC3C2;--faint:#8B908F;
+    --rule:#2E302F;--line:#F3F1ED;--accent:#D2915A;--met:#7FB48F;}
+}
+:root[data-theme="dark"]{--bg:#121314;--ink:#F3F1ED;--body:#BFC3C2;--faint:#8B908F;
+  --rule:#2E302F;--line:#F3F1ED;--accent:#D2915A;--met:#7FB48F;}
+*{box-sizing:border-box}
+::selection{background:var(--accent);color:#F8F7F4}
+body{background:var(--bg);color:var(--body);margin:0;font-family:var(--serif);font-size:18px;line-height:1.58;-webkit-font-smoothing:antialiased}
+.page{max-width:760px;margin:0 auto;padding-inline:24px;padding-block:0 110px}
+h1,h2,h3{font-family:var(--sans);color:var(--ink);margin:0;line-height:1.05;letter-spacing:-.02em;font-weight:800;text-wrap:balance}
+p{margin:0}
+img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
+a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+em{font-style:italic;color:var(--faint)}
+figure{margin:0}
+
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:14px 28px;
+  padding-block:58px 14px;border-bottom:2px solid var(--line)}
+.head h1{font-size:clamp(28px,4.4vw,38px);letter-spacing:-.03em}
+.head .id{font-family:var(--sans);font-size:14.5px;color:var(--faint);line-height:1.65;text-align:right}
+@media(max-width:620px){.head .id{text-align:left}}
+
+.scope{margin-top:22px;font-size:16.5px;line-height:1.55;color:var(--faint);max-width:640px}
+.proj{padding-block:64px 0}
+.proj + .proj{border-top:1px solid var(--rule);margin-top:70px}
+.proj h2{font-size:clamp(30px,4.6vw,42px)}
+.where{font-family:var(--sans);font-size:14.5px;color:var(--faint);line-height:1.7;margin-top:14px}
+.open{margin-top:26px;font-size:19.5px;line-height:1.5;color:var(--ink)}
+
+.step{margin-top:44px}
+.step .n{font-family:var(--sans);font-weight:700;font-size:13.5px;color:var(--accent)}
+.step h3{font-size:21px;margin-top:5px}
+.step figure{margin-top:18px}
+figure.pair{display:flex;gap:16px;align-items:flex-start}
+figure.pair img{width:calc(50% - 8px)}
+.step p:last-child{margin-top:16px}
+.step figure + p{margin-top:14px}
+
+.result{display:grid;gap:24px 44px;margin-top:52px;padding-top:26px;border-top:2px solid var(--line)}
+@media(min-width:640px){.result{grid-template-columns:190px minmax(0,1fr)}}
+.hero b{display:block;font-family:var(--sans);font-weight:800;font-size:clamp(40px,5.6vw,54px);
+  line-height:.9;color:var(--ink);letter-spacing:-.045em;font-variant-numeric:tabular-nums}
+.hero span{display:block;margin-top:13px;font-family:var(--sans);font-size:14px;line-height:1.5;color:var(--faint)}
+.spec{margin:0}
+.spec div{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 26px;
+  padding-block:10px;border-bottom:1px solid var(--rule)}
+.spec div:last-child{border-bottom:0}
+.spec dt{font-family:var(--sans);font-size:14.5px;color:var(--faint)}
+.spec dd{margin:0;font-family:var(--sans);font-weight:700;font-size:15.5px;color:var(--ink);font-variant-numeric:tabular-nums}
+.spec dd i{font-style:normal;font-weight:400;font-size:12.5px;color:var(--met);margin-left:11px}
+
+.note{margin-top:34px;font-size:16.5px;color:var(--faint);padding-left:20px;border-left:2px solid var(--rule)}
+.lab{font-family:var(--sans);font-weight:700;font-size:14.5px;color:var(--ink);display:block;margin-bottom:5px}
+img.narrow{max-width:330px}
+img.mid{max-width:460px}
+
+footer{margin-top:84px;padding-top:26px;border-top:2px solid var(--line);font-family:var(--sans);font-size:15px;color:var(--faint);line-height:1.9}
+
+</style>
+</head>
+<body>
+<div class="page">
+<header class="head">
+  <h1>Adel Aswad</h1>
+  <p class="id">Mechanical Engineering, University of Florida, 2029<br>
+    aswad.a@ufl.edu &nbsp; <a href="https://www.linkedin.com/in/adel-aswad">linkedin.com/in/adel-aswad</a></p>
+</header>
+<p class="scope">Each project below is a selection. There is more behind every one than fits here, and for the internship, more than confidentiality lets me show. I can walk through the rest in conversation.</p>
+
+<section class="proj">
+  <h2>Injection mold tooling</h2>
+  <p class="where">Design Engineering Intern &nbsp;|&nbsp; Saudi Mais for Medical Products, Riyadh &nbsp;|&nbsp; June to August 2026</p>
+  <p class="open">Mold designs went from drawing straight to machining. Nobody held the geometry before steel was cut, so mistakes surfaced after the tooling was already made. Several parts had no drawings or model on file at all.</p>
+
+  <div class="step">
+    <p class="n">Step one</p>
+    <h3>What I was handed</h3>
+    <p>The physical bicarbonate bag holder and cap, and nothing else. No drawings, no model, no dimensions on file. Before anyone could change the part or build tooling for it, the geometry had to exist somewhere.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step two</p>
+    <h3>Measured the whole assembly by hand</h3>
+    <p>Calipers and micrometers, feature by feature, including the inner filters. Tolerances ran from 0.1 mm on the caps and bodies down to 0.02 mm where parts meet the needle, so the measuring had to be tighter than the loosest feature would suggest.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step three</p>
+    <h3>Rebuilt it in CAD, with drawings behind it</h3>
+    <figure class="pair"><img src="img/mais_iso.jpg" alt="Isometric CAD view of the whole bag holder and cap assembly"><img loading="lazy" decoding="async" src="img/mais_plan.jpg" alt="Top view of the cap, bail and spout"></figure>
+    <p>Every measured feature modelled and dimensioned. Left, an isometric of the whole assembly. Right, the top view of the cap, bail and spout. Parts made from this model fit and worked, which is the only real test of whether the measuring was right.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step four</p>
+    <h3>Printed the mold geometry before cutting steel</h3>
+    <p>Instead of releasing a drawing straight to the machine shop, I printed the mold geometry in PLA and checked it in my hands first. It went onto six molds carrying roughly $900,000 of tooling, and the company still runs the step.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step five</p>
+    <h3>Checked everyone else's drawings before release</h3>
+    <p>Flatness, hole concentricity and wall thickness on each release package. I also added ISO 286 fits and GD&amp;T callouts to drawings that had dimensions but nothing controlling how the parts actually had to go together.</p>
+  </div>
+
+  <div class="result">
+    <div class="hero"><b>$900K</b><span>Tooling the print check covered, across six molds</span></div>
+    <dl class="spec">
+      <div><dt>Molds released to production</dt><dd>10</dd></div>
+      <div><dt>Design revisions worked through</dt><dd>50+</dd></div>
+      <div><dt>Tolerance range held</dt><dd>0.1 to 0.02 mm</dd></div>
+      <div><dt>Rebuilt from hand measurement</dt><dd>holder, cap, inner filters</dd></div>
+    </dl>
+  </div>
+  <p class="note"><span class="lab">What is shown</span>Only the views cleared for sharing appear here: an isometric of the assembly and the top view of the cap, with no dimensions and no drawing detail. The tooling itself belongs to the employer.</p>
+</section>
+
+<section class="proj">
+  <h2>Machining a national-winning car</h2>
+  <p class="where">Manufacturing Engineer &nbsp;|&nbsp; Vestyge Racing, STEM Racing, Riyadh &nbsp;|&nbsp; November 2024 to July 2025</p>
+  <p class="open">A car cut from a polyurethane block has to hit a surface finish target, a mass window and dimensional tolerances at once. Roughness costs you drag, mass costs you acceleration, and material removed to help one hurts the other.</p>
+
+  <div class="step">
+    <p class="n">Step one</p>
+    <h3>Wrote the toolpaths</h3>
+    <figure><img loading="lazy" decoding="async" src="img/camplans.jpg" alt="CNC toolpath plans for three machining orientations"></figure>
+    <p>Three machining orientations, each with its own plan, generated in QuickCAM Pro. A 6.35 mm ball nose clears bulk material fast, a 3.175 mm flat end cuts the detail the big tool cannot reach.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step two</p>
+    <h3>Machined it in three setups</h3>
+    <figure><img loading="lazy" decoding="async" src="img/shop.jpg" alt="Machining, sanding and assembly work in the shop"></figure>
+    <p>The part has to be flipped between orientations, and every flip is a chance to lose alignment. Dowel-located foam fixtures meant it registered the same way each time. Machining, sanding, painting and assembly were all done in house.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step three</p>
+    <h3>Measured the surface instead of judging it by eye</h3>
+    <figure><img loading="lazy" decoding="async" src="img/rough.jpg" alt="Digital microscope images of the machined surface"></figure>
+    <p>We had no profilometer. I traced a profile line across 200x digital microscope images and scaled it to microns against a reference, which gave a number to work against rather than an opinion about how smooth it felt.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step four</p>
+    <h3>Changed one CAM parameter</h3>
+    <p>Dropping stepover from 12% to 10% brought the machined surface to 14.8 microns Ra against a 15 micron target. Finishing went from 800 grit sanding down to a single 1000 to 1200 grit pass, so the machine was doing work the sandpaper used to do.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step five</p>
+    <h3>Found the center of mass by testing, not by assuming</h3>
+    <figure><img loading="lazy" decoding="async" src="img/comgraph.jpg" alt="Average race time plotted against ballast position" class="chart"></figure>
+    <p>Four timed runs per ballast position, averaged. A slight forward bias won at 1.113 s against 1.180 s with the ballast at the rear. Rear was stable but slow off the line, so the fast launch was worth the small loss in control.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step six</p>
+    <h3>The car that raced</h3>
+    <figure><img loading="lazy" decoding="async" src="img/hero_car.jpg" alt="The finished car, three-quarter view" class="short"></figure>
+    <p>Built mass 48.1 g against a 48.5 g limit. Best run 1.001 s, down from 1.193 s across four builds. <em>Render by the team.</em></p>
+  </div>
+
+  <div class="result">
+    <div class="hero"><b>14.8</b><span>Microns Ra measured on the machined surface</span></div>
+    <dl class="spec">
+      <div><dt>Surface roughness target</dt><dd>15 &micro;m Ra <i>met</i></dd></div>
+      <div><dt>Mass limit and built mass</dt><dd>48.5 g limit, 48.1 g built <i>met</i></dd></div>
+      <div><dt>Best run, across four builds</dt><dd>1.001 s, from 1.193 s</dd></div>
+      <div><dt>National result</dt><dd>1st, 754 of 800</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="proj">
+  <h2>A 44 inch airframe, from CFD to the wing</h2>
+  <p class="where">Aerodynamics and Structures Lead &nbsp;|&nbsp; Scope UF, founding member &nbsp;|&nbsp; January 2026 to present</p>
+  <p class="open">We built the airframe from scratch and needed to know where it was losing performance before committing to the build. Hand calculations give lift and drag for a wing on its own. They say nothing about how the fuselage, wing and tail interact.</p>
+
+  <div class="step">
+    <p class="n">Step one</p>
+    <h3>Solved the baseline airframe</h3>
+    <figure><img loading="lazy" decoding="async" src="img/cfd_sharp.jpg" alt="CFD streamlines over the original airframe with a sharp nose" class="tall"></figure>
+    <p>Full airframe in ANSYS Discovery, air at 12 m/s, steady state and incompressible. Flow stayed attached along the fuselage and over the wing, which was the first thing to rule out. Peak local velocity read 13.8 m/s against the 12 m/s freestream.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step two</p>
+    <h3>Traced the disturbance back to the nose</h3>
+    <p>Streamlines broke off the sharp tip instead of following the surface, and the disturbance carried back along the forward fuselage rather than settling out. A sharp leading point forces the flow around a corner it cannot follow, so it separates, and the wake behind it costs pressure drag with no lift in return.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step three</p>
+    <h3>Reshaped the tip into a blended fairing</h3>
+    <figure><img loading="lazy" decoding="async" src="img/cfd_nose.jpg" alt="Close view of the revised blended nose"></figure>
+    <p>Curvature is now continuous from the stagnation point back along the fuselage to the wing leading edge, so there is no corner for the flow to leave. In this view it holds against the surface the whole way.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step four</p>
+    <h3>Re-solved and read the drag</h3>
+    <figure><img loading="lazy" decoding="async" src="img/cfd_revised.jpg" alt="CFD streamlines over the revised airframe" class="tall"></figure>
+    <p>The revised airframe solves to 2.19 N at 12 m/s, read as the X component of total force. Pressure and viscous forces were monitored separately, so a change can be attributed to form drag or to skin friction rather than landing in one number.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step five</p>
+    <h3>Let the pressure result change the structure, not the shape</h3>
+    <p>Surface pressure concentrated toward the aft wing rather than sitting over the main spar, which is not where the build assumed the load would land. We reinforced the aft section instead of stiffening the whole rib set, putting material where the data showed the load and keeping the weight penalty local.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step six</p>
+    <h3>Cut the ribs from foam sheet</h3>
+    <figure><img loading="lazy" decoding="async" src="img/sc_cut.jpg" alt="Airfoil profiles cut out of foam sheet with a knife" class="tall"></figure>
+    <p>The Clark Y profile traced onto foam and cut by hand with a knife, one rib at a time. The cut is deliberately left proud of the line. A knife cut in foam tears and undercuts, so the outline is not where the profile is finished, only where it starts.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step seven</p>
+    <h3>Took each rib to near the line on the disc sander</h3>
+    <figure><img loading="lazy" decoding="async" src="img/sc_disc.jpg" alt="Foam rib held against a disc sander" class="tall"></figure>
+    <p>Fast removal, but it takes material off faster than you can judge it, so the sander stops short of the line on purpose. The rib rides flat on the table so the edge stays square to the face, which matters when ribs are stacked and have to match each other.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step eight</p>
+    <h3>Finished to the line by hand</h3>
+    <figure class="pair"><img loading="lazy" decoding="async" src="img/sc_hand.jpg" alt="Hand sanding a foam rib to the drawn outline"><img loading="lazy" decoding="async" src="img/sc_rib.jpg" alt="A finished rib beside the sanding block"></figure>
+    <p>The last of the material comes off with 400 grit by hand, down to the drawn outline. This is the step that decides whether the section is actually a Clark Y. A rib sanded under the line at the leading edge or the upper surface is a different airfoil from the one that was solved, and the CFD result stops applying to the part that was built.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">Step nine</p>
+    <h3>The rib set and the covered wing</h3>
+    <figure class="pair"><img loading="lazy" decoding="async" src="img/sc_ribs.jpg" alt="The set of covered foam ribs laid out on a cutting mat"><img loading="lazy" decoding="async" src="img/sc_wing.jpg" alt="The finished wing section on the bench"></figure>
+    <p>The finished ribs laid out to check them against each other, and the wing section with its skin on. The tape does what film covering does on a balsa build: it closes the surface so the air sees the profile, not the foam. Sanding and covering the wing was hand work, and it is the part of the airframe I can vouch for dimensionally because I made it.</p>
+  </div>
+
+  <div class="result">
+    <div class="hero"><b>2.19 N</b><span>Drag on the revised airframe at 12 m/s</span></div>
+    <dl class="spec">
+      <div><dt>Freestream and peak local velocity</dt><dd>12 and 13.8 m/s</dd></div>
+      <div><dt>Wing section</dt><dd>Clark Y</dd></div>
+      <div><dt>Wing ribs</dt><dd>foam, hand sanded to line</dd></div>
+      <div><dt>Changes driven by results</dt><dd>nose shape, aft wing structure</dd></div>
+      <div><dt>Convergence and mesh checks</dt><dd>flat force trace, wall y+</dd></div>
+    </dl>
+  </div>
+  <p class="note"><span class="lab">What this does not show</span>The original sharp nose was never re-run in air, so 2.19 N is the drag of the revised state and not a measured saving. The first solve had water in the domain rather than air; its pressure monitor read 905 Pa against 0.85 Pa for the air case, and that ratio matching the water to air density ratio is how we found the fluid setting was wrong rather than the geometry. The propeller is not modeled, surfaces are rigid and smooth, and a ground plane still sits in the domain.</p>
+</section>
+
+<footer>
+  Adel Aswad<br>
+  aswad.a@ufl.edu &nbsp; <a href="https://www.linkedin.com/in/adel-aswad">linkedin.com/in/adel-aswad</a><br>
+  September 2026<br>
+  Further detail on any of these projects is available on request, within what each organisation allows me to share.
+</footer>
+
+</div>
+</body>
+</html>
