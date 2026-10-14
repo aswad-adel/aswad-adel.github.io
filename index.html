@@ -40,6 +40,27 @@ figure .pair{justify-content:center}figure .pair img{width:auto;max-width:calc(5
 figcaption{margin-top:6px;font-size:15px}
 .note{margin-top:16px;font-size:15px;font-style:italic;color:var(--faint)}
 footer{margin-top:48px;padding-top:10px;border-top:1px solid var(--ink);font-size:15px;text-align:center}
+figure,.tbl,table,tr,.pab p,.note{break-inside:avoid;page-break-inside:avoid}
+h2,.where{break-after:avoid;page-break-after:avoid}
+figcaption,caption{break-before:avoid;page-break-before:avoid}
+@page{size:Letter;margin:0.5in 0.6in}
+@media print{
+  .page{max-width:none;padding:0}
+  body{font-size:11pt}
+  figure img{max-height:2.5in;width:auto;max-width:100%;margin:0 auto}
+  figure .pair img{max-height:2.7in}
+  figure{margin-top:14px}
+  .tbl{margin-top:12px}
+  body{line-height:1.3}
+  .pab p{margin-top:7px}
+  .proj:first-of-type figure .pair img{max-height:2.3in}
+  footer{display:none}
+  img.car{max-height:1.05in}
+  .proj:last-of-type figure{margin-top:10px}
+  a{color:#111}
+  .proj + .proj{break-before:page;page-break-before:always;margin-top:0}
+  .where{break-inside:avoid}
+}
 </style>
 </head>
 <body>
@@ -146,7 +167,7 @@ footer{margin-top:48px;padding-top:10px;border-top:1px solid var(--ink);font-siz
     <figcaption><i>Figure 7.</i> Machined surface at 200x. A profile traced across images like these, scaled to microns, gave 14.8 &micro;m Ra at 10% stepover.</figcaption>
   </figure>
   <figure>
-    <img src="hero_car.jpg" alt="The finished car, three-quarter view">
+    <img class="car" src="hero_car.jpg" alt="The finished car, three-quarter view">
     <figcaption><i>Figure 8.</i> The car as raced, 48.1 g. Render by the team.</figcaption>
   </figure>
 </section>
